@@ -7,5 +7,6 @@ ENV N8N_PROTOCOL=https
 # Expose the port
 EXPOSE 7860
 
-# Start n8n
-CMD ["n8n", "start"]
+# Use the full path for the n8n command
+ENTRYPOINT ["node", "/usr/local/lib/node_modules/n8n/bin/n8n"]
+CMD ["start"]
